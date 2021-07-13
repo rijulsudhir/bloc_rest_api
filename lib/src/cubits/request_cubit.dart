@@ -77,7 +77,7 @@ class RequestCubit<T> extends Cubit<RequestState<T>> {
     Map<String, String> header,
     T Function(dynamic json) fromMap,
     Duration timeOut,
-    bool enableLogs,
+    bool enableLogs = false,
   }) async {
     // check if fromMap function is provided
     assert((fromMap != null || this.fromMap != null),
@@ -130,7 +130,7 @@ class RequestCubit<T> extends Cubit<RequestState<T>> {
     dynamic body,
     T Function(dynamic json) fromMap,
     Duration timeOut,
-    bool enableLogs,
+    bool enableLogs =false,
   }) async {
     // check if fromMap function is provided
     assert((fromMap != null || this.fromMap != null),
